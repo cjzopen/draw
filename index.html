@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <!-- <link rel="shortcut icon" href="ico url"> -->
+  <link rel="stylesheet" href="apps/css/style.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+</head>
+<body>
+<div id="app">
+  <time></time>
+  <h4 class="m-0">改寫成 ie support (IE11) 途中…</h4>
+  <a href="data2.json">查看此範例抓取的資料</a>(用 firefox 看 json 檔比較不傷眼)<br>
+  <input type="number" id="duration1" min="1" max="10" placeholder="1">秒<button id="d-r-a-w" class="btn btn-danger">DRAW</button>
+  <input type="number" id="duration2" min="1" max="10" placeholder="1">秒<button id="d-r-a-w-2" class="btn btn-danger">DRAW</button>
+  <nav></nav>
+  <ul>
+    <li class="d-flex thead">
+      <div>質詢順序</div>
+      <div class="member-group">成員</div>
+    </li>
+  </ul>
+  <ul id="draw-order" class="d-flex flex-column flex-wrap"></ul>
+  <button id="sort-speakingorder" class="btn btn-info" style="display: none">照質詢順序排序</button>
+  <button id="sort-number" class="btn btn-info" style="display: none">照組別排序</button>
+</div>
+<!-- <script src="lib/polyfill/map.js"></script>
+<script src="lib/polyfill/fetch.js"></script>
+<script src="lib/polyfill/promise.js"></script>
+<script src="apps/js/ie.js"></script> -->
+<script type="text/javascript">
+// if(navigator.userAgent.match(/Trident\/7\./)) {
+  $.when(
+    $.getScript("lib/polyfill/map.js"),
+    $.getScript("lib/polyfill/fetch.js"),
+    $.getScript("lib/polyfill/promise.js")
+    // $.Deferred(function( deferred ){
+    //   $( deferred.resolve );
+    // })
+  ).done(function(){
+    $.getScript("apps/js/ie.js");
+
+    //place your code here, the scripts are all loaded
+
+  }).fail(function(x,e){
+    if (x.status==0) {
+      alert('You are offline!!\n Please Check Your Network.');
+    } else if(x.status==404) {
+      alert('Requested URL not found.');
+    } else if(x.status==500) {
+      alert('Internel Server Error.');
+    } else if(e=='parsererror') {
+      alert('Error.\nParsing JSON Request failed.');
+    } else if(e=='timeout'){
+      alert('Request Time out.');
+    } else {
+      alert('Unknow Error.');
+    }
+    console.log(x.responseText)
+  });
+  // document.getElementsByTagName('h4')[0].innerText = 'Please update to IE14 at least, or use chrome, firefox...etc';
+  // $.getScript('apps/js/ie.js');
+// }else{
+  // document.getElementsByTagName('h4')[0].innerText = '';
+  // $.getScript('apps/js/es6.js');
+// }
+</script>
+</body>
+</html>

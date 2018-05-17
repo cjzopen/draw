@@ -1,0 +1,65 @@
+[
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "4",
+    "number": "1",
+    "member": "a,b,c"
+  },
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "1",
+    "number": "2",
+    "member": "d,e,f"
+  },
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "2",
+    "number": "3",
+    "member": "z,x"
+  },
+  {
+    "committee": "環境",
+    "speakingOrder":"",
+    "drawOrder": "3",
+    "number": "4",
+    "member": "g,h"
+  },
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "3",
+    "number": "4",
+    "member": "g,h"
+  },
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "5",
+    "number": "5",
+    "member": "y,v"
+  },
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "7",
+    "number": "6",
+    "member": "s,dy"
+  },
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "6",
+    "number": "7",
+    "member": "g,k"
+  },
+  {
+    "committee": "財政",
+    "speakingOrder":"",
+    "drawOrder": "8",
+    "number": "8",
+    "member": "=u="
+  }
+]

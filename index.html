@@ -42,7 +42,7 @@
 <!-- <script src="lib/polyfill/map.js"></script>
 <script src="lib/polyfill/fetch.js"></script>
 <script src="lib/polyfill/promise.js"></script>
-<script src="apps/js/ie.js"></script> -->
+<script src="apps/js/script.js"></script> -->
 <script type="text/javascript">
 // if(navigator.userAgent.match(/Trident\/7\./)) {
   $.when(
@@ -53,7 +53,7 @@
     //   $( deferred.resolve );
     // })
   ).done(function(){
-    $.getScript("apps/js/ie.js");
+    $.getScript("apps/js/script.js");
 
     //place your code here, the scripts are all loaded
 
@@ -74,7 +74,7 @@
     console.log(x.responseText)
   });
   // document.getElementsByTagName('h4')[0].innerText = 'Please update to IE14 at least, or use chrome, firefox...etc';
-  // $.getScript('apps/js/ie.js');
+  // $.getScript('apps/js/script.js');
 // }else{
   // document.getElementsByTagName('h4')[0].innerText = '';
   // $.getScript('apps/js/es6.js');

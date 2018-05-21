@@ -19,11 +19,15 @@
 <body>
 <div id="app">
   <time></time>
-  <h4 class="m-0">改寫成 ie support (IE11) 途中…</h4>
-  <a href="data2.json">查看此範例抓取的資料</a>(用 firefox 看 json 檔比較不傷眼)<br>
+  <a href="data2.json">查看此範例抓取的資料</a><br>
   <input type="number" id="duration1" min="1" max="10" placeholder="1">秒<button id="d-r-a-w" class="btn btn-danger">DRAW</button>
   <input type="number" id="duration2" min="1" max="10" placeholder="1">秒<button id="d-r-a-w-2" class="btn btn-danger">DRAW</button>
-  <nav></nav>
+  <nav id="nav">
+    <ul>
+      <!-- <li><a href="#財政">財政</a></li> -->
+      <!-- <li><a href="#環境">環境</a></li> -->
+    </ul>
+  </nav>
   <ul>
     <li class="d-flex thead">
       <div>質詢順序</div>
@@ -33,6 +37,7 @@
   <ul id="draw-order" class="d-flex flex-column flex-wrap"></ul>
   <button id="sort-speakingorder" class="btn btn-info" style="display: none">照質詢順序排序</button>
   <button id="sort-number" class="btn btn-info" style="display: none">照組別排序</button>
+  <button id="save" class="btn btn-info">save</button>
 </div>
 <!-- <script src="lib/polyfill/map.js"></script>
 <script src="lib/polyfill/fetch.js"></script>

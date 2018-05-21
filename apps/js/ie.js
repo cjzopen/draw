@@ -1,17 +1,43 @@
+// url hash value
+var committeeType ='';
+function tab(){
+  committeeType = decodeURI(window.location.hash.substr(1));
+}
+tab();
+
+//load and save
+//data2.json 暫定為後端給予資料的路徑
+//test.php 暫定為後端接收與處理資料的路徑
 var loadingReq = new Request('data2.json', {method: 'GET', cache: 'reload'});
-var savingReq = new Request('test.php', {
-  method: 'POST',
-  mode: "same-origin",
-  credentials: "same-origin",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    "payload": ""
+function feachSave(json){
+  var savingReq = new Request('test.php', {
+    method: 'POST',
+    mode: "same-origin",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    //request payload
+    body: JSON.stringify(json)
+  });
+  fetch(savingReq)
+  .then(function(response){
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }else{
+      // console.info(response)
+      console.log(response.json())
+    }
+  }).catch(function(err) {
+    console.log(err)
   })
-});
+}
+
 var originalData='';
-var loadingFetch = function(){
+
+
+function loadingFetch(tabsExist){
+  tabsExist = tabsExist || false;
   fetch(loadingReq).then(function(response) {
     if (!response.ok) {
       throw Error(response.statusText);
@@ -24,13 +50,23 @@ var loadingFetch = function(){
       //產生html
       var total=0;
       var memberArray = new Array();
+      var tabsArray = new Array();
       $.each(result,function(key,value) {
-        // document.getElementsByTagName('nav').innerHTML += '<a href="./?' + value.committee +
-        if(value.committee == '財政'){
+        //create tabs
+        if(!tabsExist){
+          if(tabsArray.indexOf(value.committee) == -1){
+            tabsArray.push(value.committee);
+            $('#nav ul').append('<li><a href="#' + value.committee + '">' + value.committee + '</a></li>');
+          }
+        }
+        //create data
+        if(value.committee == committeeType){
           total++
           var speakingOrderValue = value.speakingOrder || '#';
+          var memberDisplay = '#';
+          if(value.drawOrder) memberDisplay = value.member;
           memberArray.push(value.member);
-          document.getElementById('draw-order').innerHTML += '<li data-speakingorder="'+ value.speakingOrder + '" data-draw="'+ value.drawOrder +'" data-number="'+ value.number +'"><div>' + speakingOrderValue + '</div><div class="member-group">' + '#' + '</div></li>';
+          document.getElementById('draw-order').innerHTML += '<li data-speakingorder="'+ value.speakingOrder + '" data-draw="'+ value.drawOrder +'" data-number="'+ value.number +'"><div>' + speakingOrderValue + '</div><div class="member-group">' + memberDisplay + '</div></li>';
         }
       });
       //beside array
@@ -169,4 +205,34 @@ var loadingFetch = function(){
   }).catch(function(err) {
     console.log(err)
   })
-}();
+}
+loadingFetch();
+
+$('body').on('click', '#nav a', function(){
+  $(this).closest('li').siblings().removeClass('act');
+  $(this).closest('li').addClass('act');
+});
+$(window).on('hashchange', function (e) {
+  tab();
+  // $('#draw-order *').remove();
+  document.getElementById('draw-order').innerHTML='';
+  loadingFetch(true);
+});
+
+
+//click save
+var saveArray = [];
+$('body').on('click', '#save', function(){
+  saveArray=[];
+  // $('#draw-order li div').eq(0).text();
+  $('#draw-order li').each(function(){
+    var tempObj={
+      "committee": committeeType,
+      "speakingOrder": $(this).children(':first').text(),
+      "member": $(this).find('.member-group').text()
+    }
+    saveArray.push(tempObj);
+  });
+  console.log(saveArray);
+  feachSave(saveArray);
+});

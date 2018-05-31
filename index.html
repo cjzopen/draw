@@ -9,6 +9,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <!-- <link rel="shortcut icon" href="ico url"> -->
   <link rel="stylesheet" href="apps/css/style.css">
+  <link rel="stylesheet" href="apps/css/tab.css">
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -18,33 +19,62 @@
 </head>
 <body>
 <div id="app">
-  <time></time>
-  <a href="data2.json">查看此範例抓取的資料</a><br>
-  <input type="number" id="duration1" min="1" max="10" placeholder="1">秒<button id="d-r-a-w" class="btn btn-danger">DRAW</button>
-  <input type="number" id="duration2" min="1" max="10" placeholder="1">秒<button id="d-r-a-w-2" class="btn btn-danger">DRAW</button>
+  <header id="header">
+    <div id="header-top">&nbsp;</div>
+    <div class="px-3 py-2">
+      <a href=""><img src="tcc-gov.png" alt="台北市議會"></a>
+    </div>
+  </header>
+  <div class="px-3">
+    第 <span>x</span> 屆
+    第 <span>x</span> 次
+    <span>定期大會</span>
+    - 質詢組線上抽籤
+  </div>
+  <!-- <a href="data2.json">查看此範例抓取的資料</a><br> -->
   <nav id="nav">
     <ul>
-      <!-- <li><a href="#財政">財政</a></li> -->
-      <!-- <li><a href="#環境">環境</a></li> -->
+      <li><a href="#市長施政報告">市長施政報告</a></li>
+      <li><a href="#民政部門">民政部門</a></li>
+      <li><a href="#財建部門">財建部門</a></li>
+      <li><a href="#教育部門">教育部門</a></li>
+      <li><a href="#交通部門">交通部門</a></li>
+      <li><a href="#警政衛生部門">警政衛生部門</a></li>
+      <li><a href="#工務部門">工務部門</a></li>
+      <li><a href="#市政總質詢">市政總質詢</a></li>
+      <li><a href="#預算編製經過情形報告">預算編製經過情形報告</a></li>
+      <li><a href="#其它">其它</a></li>
     </ul>
   </nav>
-  <ul>
-    <li class="d-flex thead">
-      <div>質詢順序</div>
-      <div class="member-group">成員</div>
-    </li>
-  </ul>
-  <ul id="draw-order" class="d-flex flex-column flex-wrap"></ul>
-  <button id="sort-speakingorder" class="btn btn-info" style="display: none">照質詢順序排序</button>
-  <button id="sort-number" class="btn btn-info" style="display: none">照組別排序</button>
-  <button id="save" class="btn btn-info">save</button>
+  <main id="main" class="p-3">
+    <div class="py-1">
+      <input type="number" id="duration" min="1" max="9">秒 &nbsp;
+      1-<span id="group-total"></span>組順序抽籤 &nbsp;
+      依<select name="" id="select">
+        <option value="原始抽籤">原始抽籤</option>
+        <option value="質詢順序">質詢順序</option>
+      </select>顯示 &nbsp;&nbsp;
+      <button id="print" class="bttn bttn-default">列印</button>&nbsp;
+      <button id="reset" class="bttn bttn-default">取消重抽</button>
+    </div>
+    <ul class="mb-0 gray-bg">
+      <li class="d-flex thead">
+        <div>質詢順序 <button id="d-r-a-w" class="bttn bttn-org">GO</button></div>
+        <div class="member-group">
+          小組成員 <button id="d-r-a-w-2" class="bttn bttn-info">GO</button>
+        </div>
+      </li>
+    </ul>
+    <ul id="draw-order" class="d-flex flex-column flex-wrap"></ul>
+    <!-- <button id="save" class="btn btn-info">save</button> -->
+  </main>
 </div>
 <!-- <script src="lib/polyfill/map.js"></script>
 <script src="lib/polyfill/fetch.js"></script>
 <script src="lib/polyfill/promise.js"></script>
 <script src="apps/js/script.js"></script> -->
 <script type="text/javascript">
-// if(navigator.userAgent.match(/Trident\/7\./)) {
+// if(navigator.userAgent.match(/Trident\/7\./)) {})
   $.when(
     $.getScript("lib/polyfill/map.js"),
     $.getScript("lib/polyfill/fetch.js"),
@@ -54,9 +84,6 @@
     // })
   ).done(function(){
     $.getScript("apps/js/script.js");
-
-    //place your code here, the scripts are all loaded
-
   }).fail(function(x,e){
     if (x.status==0) {
       alert('You are offline!!\n Please Check Your Network.');
@@ -73,12 +100,6 @@
     }
     console.log(x.responseText)
   });
-  // document.getElementsByTagName('h4')[0].innerText = 'Please update to IE14 at least, or use chrome, firefox...etc';
-  // $.getScript('apps/js/script.js');
-// }else{
-  // document.getElementsByTagName('h4')[0].innerText = '';
-  // $.getScript('apps/js/es6.js');
-// }
 </script>
 </body>
 </html>

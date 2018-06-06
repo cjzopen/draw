@@ -1,86 +1,154 @@
 [
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "1",
-    "member": "a,b,c"
+    "member": "吳志剛,闕枚莎,徐弘庭,陳炳甫,王鴻薇"
   },
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "2",
-    "member": "d,e,f"
+    "member": "王世堅,江志銘,林世宗"
   },
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "3",
-    "member": "z,x"
+    "member": "李慶鋒,陳慈慧,顏若芳,許家蓓"
   },
   {
-    "committee": "環境",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "1",
-    "member": "afad,g,h"
+    "member": "李建昌,周威佑,許淑華,梁文傑,簡舒培"
   },
   {
-    "committee": "環境",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "2",
-    "member": "r,g,rt"
+    "member": "阮昭雄,顏聖冠,洪健益,謝維洲"
   },
   {
-    "committee": "環境",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "3",
-    "member": "aet,g,h,assdf,afa"
+    "member": "周柏雅,張茂楠,王孝維,劉耀仁,黃向羣"
   },
   {
-    "committee": "環境",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "4",
-    "member": "環境,g,h"
+    "member": "陳政忠,林國成,黃珊珊,李慶元"
   },
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "4",
-    "member": "g,h"
+    "member": "陳彥伯,潘懷宗"
   },
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "5",
-    "member": "y,v"
+    "member": "徐世勲"
   },
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "6",
-    "member": "s,dy"
+    "member": "陳建銘"
   },
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "7",
-    "member": "g,k"
+    "member": "郭昭巖,秦慧珠,李芳儒"
   },
   {
-    "committee": "財政",
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
     "speakingOrder":"",
     "drawOrder": "",
-    "number": "8",
-    "member": "=u="
+    "member": "汪志冰,戴錫欽"
+  },
+  {
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
+    "speakingOrder":"",
+    "drawOrder": "",
+    "member": "陳重文,陳義洲,應曉薇,歐陽龍,李傅中武,葉林傳,陳永德"
+  },
+  {
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
+    "speakingOrder":"",
+    "drawOrder": "",
+    "member": "童仲彥"
+  },
+  {
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
+    "speakingOrder":"",
+    "drawOrder": "",
+    "member": "林瑞圖"
+  },
+  {
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
+    "speakingOrder":"",
+    "drawOrder": "",
+    "member": "王威中,高嘉瑜"
+  },
+  {
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
+    "speakingOrder":"",
+    "drawOrder": "",
+    "member": "何志偉,王閔生"
+  },
+  {
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
+    "speakingOrder":"",
+    "drawOrder": "",
+    "member": "鍾小平,王欣儀"
+  },
+  {
+    "committee": "預算編製經過情形報告",
+    "MeetExpire":12,
+    "MeetSession":7,
+    "speakingOrder":"",
+    "drawOrder": "",
+    "member": "厲耿桂芳,吳世正,林亭君,陳孋輝"
   }
 ]

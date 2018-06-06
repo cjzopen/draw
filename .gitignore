@@ -1,0 +1,9 @@
+.DS_Store
+thumbs.db
+desktop.ini
+*.scss
+*.map
+src/
+koala-config.json
+aspnet_client/
+web.config

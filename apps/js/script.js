@@ -78,6 +78,7 @@
         arr.push(i)
       }
       $('#group-total').text(total);
+      $('#draw-order').css('height',Math.ceil(total/2)*3.625+'rem');
     });
   }).catch(function(err) {
     console.log(err)

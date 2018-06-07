@@ -19,28 +19,35 @@
 </head>
 <body>
 <div id="app">
-  <header id="header">
+  <header id="header" class="mb-1">
     <div id="header-top">&nbsp;</div>
     <div class="px-3 py-2">
       <a href=""><img src="tcc-gov.png" alt="台北市議會"></a>
     </div>
   </header>
   <div class="px-3" style="font-size: 1.2rem;">
-    第 <span>x</span> 屆
-    第 <span>x</span> 次
+    第 <span>12</span> 屆
+    第 <span>7</span> 次
     <span>定期大會</span>
     - 質詢組線上抽籤
   </div>
   <!-- <a href="data2.json">查看此範例抓取的資料</a><br> -->
-  <nav id="nav">
+  <nav id="nav" class="mt-0">
     <ul>
       <li><a href="#市長施政報告">市長施政報告</a></li>
       <li><a href="#民政部門">民政部門</a></li>
+      <li><a href="#財建部門">財政建設部門</a></li>
+      <li><a href="#教育部門">教育部門</a></li>
+      <li><a href="#交通部門">交通部門</a></li>
+      <li><a href="#警政衛生部門">警政衛生部門</a></li>
+      <li><a href="#工務部門">工務部門</a></li>
+      <li><a href="#市政總質詢">市政總質詢</a></li>
+      <li><a href="#預算編製報告">預算編製報告</a></li>
     </ul>
   </nav>
   <main id="main" class="px-3 py-1">
     <div class="py-1">
-      <input type="number" id="duration" min="1" max="9">秒 &nbsp;
+      秒數設定<input type="number" id="duration" min="1" max="9" value="3">秒 &nbsp;
       1-<span id="group-total"></span>組順序抽籤 &nbsp;
       依<select name="" id="select">
         <option value="原始抽籤">原始抽籤</option>
